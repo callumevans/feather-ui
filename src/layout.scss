@@ -1,0 +1,44 @@
+@import '~normalize.css';
+@import 'variables.scss';
+
+body {
+  background: $background-colour;
+}
+
+#mainContainer {
+  display: grid;
+  grid-gap: 30px;
+  width: 100%;
+  padding-top: 60px;
+
+  .headshotContainer {
+    justify-self: center;
+  }
+
+  .socialIconsContainer {
+    justify-self: center;
+  }
+
+  .navMenuContainer {
+    justify-self: center;
+  }
+
+  .mainContentContainer {
+    justify-self: center;
+    width: 70%;
+    max-width: 900px;
+  }
+}
+
+article {
+  font-family: 'Scope One', serif;
+  font-size: $post-font-size;
+}
+
+h1 {
+  font-size: $post-title-font-size;
+}
+
+p {
+  line-height: $post-line-height;
+}

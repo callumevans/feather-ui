@@ -1,0 +1,7 @@
+.postSummaryContainer {
+  > * {
+    &:not(:first-child) {
+      margin: 4em 0;
+    }
+  }
+}

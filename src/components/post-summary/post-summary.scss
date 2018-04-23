@@ -1,0 +1,18 @@
+@import '../../variables';
+
+.summaryLink {
+  text-decoration: none;
+  color: inherit;
+
+  &:hover {
+    h1 {
+      text-decoration: underline;
+      text-decoration-color: $font-colour;
+    }
+
+    article {
+      text-decoration: underline;
+      text-decoration-color: lighten($font-colour, 80);
+    }
+  }
+}
