@@ -1,5 +1,5 @@
-import React from 'react';
-import { BrowserRouter , Switch, Route } from 'react-router-dom';
+import { h } from 'preact';
+import { Router, route } from 'preact-router';
 import layoutStyles from './layout.scss';
 
 import Headshot from './components/headshot/headshot';
@@ -10,9 +10,7 @@ import Post from './components/post/post';
 
 const App = () => (
     <div>
-        <BrowserRouter>
             <div id={layoutStyles.mainContainer}>
-
                 <div className={layoutStyles.headshotContainer}>
                     <Headshot />
                 </div>
@@ -26,13 +24,12 @@ const App = () => (
                 </nav>
 
                 <div className={layoutStyles.mainContentContainer}>
-                    <Switch>
-                        <Route exact path='/' component={HomeComponent} />
-                        <Route path='/posts/:seoTitle' component={Post} />
-                    </Switch>
+                    <Router>
+                        <HomeComponent path='/' />
+                        <Post path='/posts/:seoTitle' />
+                    </Router>
                 </div>
             </div>
-        </BrowserRouter>
     </div>
 );
 

@@ -1,4 +1,4 @@
-import React from 'react';
+import { h } from 'preact';
 import styles from './headshot.scss';
 
 const Headshot = () => (

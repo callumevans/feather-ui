@@ -1,12 +1,12 @@
-import React from 'react';
-import { NavLink } from 'react-router-dom';
+import { h } from 'preact';
+import { Link } from 'preact-router/match';
 import styles from './main-nav.scss';
 
 const MainNav = () => (
     <nav className={styles.nav}>
-        <NavLink to="/">Home</NavLink>
-        <NavLink to="/posts">Posts</NavLink>
-        <NavLink to="/projects">Projects</NavLink>
+        <Link href="/">Home</Link>
+        <Link href="/posts">Posts</Link>
+        <Link href="/projects">Projects</Link>
     </nav>
 );
 

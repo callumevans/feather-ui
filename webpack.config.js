@@ -8,7 +8,6 @@ module.exports = (env, argv) => {
     return {
         entry: {
             main: [
-                'react-hot-loader/babel',
                 './src/main.js'
             ]
         },
@@ -43,7 +42,7 @@ module.exports = (env, argv) => {
         plugins: getPlugins(isProduction),
         devServer: {
             inline: true,
-            hot: true,
+            hot: false,
             historyApiFallback: true,
             disableHostCheck: true,
             contentBase: 'public'
@@ -68,7 +67,7 @@ const getPlugins = (isProduction) => {
     plugins.push(new HtmlWebpackPlugin({ template: 'index.html' }));
 
     if (!isProduction) {
-        plugins.push(new webpack.HotModuleReplacementPlugin());
+        // plugins.push(new webpack.HotModuleReplacementPlugin());
         plugins.push(new webpack.NamedModulesPlugin());
     }
 

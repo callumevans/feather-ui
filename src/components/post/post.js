@@ -1,6 +1,6 @@
-import React from 'react';
+import { h, Component } from 'preact';
 
-class Post extends React.Component {
+class Post extends Component {
     constructor(props) {
         super(props);
     }

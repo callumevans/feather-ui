@@ -1,10 +1,8 @@
-import React from 'react';
+import { h } from 'preact';
 import styles from './post-summary.scss';
-import { NavLink } from 'react-router-dom';
 
 const PostSummary = ({ title }) => (
     <div>
-        <NavLink to={`/posts/seo-title`} className={styles.summaryLink}>
             <article>
                 <h1>{title}</h1>
                 <time dateTime="2018-04-23">April 23</time>
@@ -17,7 +15,6 @@ const PostSummary = ({ title }) => (
                     </p>
                 </section>
             </article>
-        </NavLink>
     </div>
 );
 
